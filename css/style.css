@@ -686,7 +686,10 @@ section{padding:130px 0;}
 
 /* ---------- process (card grid) ---------- */
 /* .process{background:var(--bg-soft);} */
-
+.process-title{
+font-family: 'Montserrat', sans-serif;
+  font-weight: 800;
+}
 
 .process-grid{
   display:grid;
