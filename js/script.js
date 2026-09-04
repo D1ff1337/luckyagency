@@ -204,12 +204,42 @@ if (teamVideo && videoPlayBtn) {
   videoPlayBtn.addEventListener('click', () => {
     if (!teamVideo.querySelector('source')) return; // no real source added yet
     if (teamVideo.paused) {
-      teamVideo.play();
-      videoPlayBtn.classList.add('is-playing');
+      const playPromise = teamVideo.play();
+      if (playPromise && playPromise.then) {
+        playPromise
+          .then(() => videoPlayBtn.classList.add('is-playing'))
+          .catch((err) => {
+            console.error('Відео не вдалося відтворити. Ймовірно, браузер не підтримує цей формат/кодек файлу.', err);
+            videoPlayBtn.classList.remove('is-playing');
+          });
+      } else {
+        videoPlayBtn.classList.add('is-playing');
+      }
     } else {
       teamVideo.pause();
       videoPlayBtn.classList.remove('is-playing');
     }
+  });
+  teamVideo.addEventListener('error', () => {
+    console.error('Відео не завантажилось: перевірте шлях до файлу та формат (рекомендовано .mp4, H.264).');
+    videoPlayBtn.classList.remove('is-playing');
+  });
+}
+
+// ==================== TEAM VIDEO FULLSCREEN ====================
+const videoFullscreenBtn = document.getElementById('videoFullscreenBtn');
+if (teamVideo && videoFullscreenBtn) {
+  videoFullscreenBtn.addEventListener('click', () => {
+    if (teamVideo.requestFullscreen) {
+      teamVideo.requestFullscreen();
+    } else if (teamVideo.webkitEnterFullscreen) {
+      teamVideo.webkitEnterFullscreen();
+    } else if (teamVideo.webkitRequestFullscreen) {
+      teamVideo.webkitRequestFullscreen();
+    }
+  });
+  document.addEventListener('fullscreenchange', () => {
+    teamVideo.controls = document.fullscreenElement === teamVideo;
   });
 }
 

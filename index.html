@@ -102,22 +102,27 @@
             </div>
           </div>
         </div>
-        <div class="video-block">
-          <video id="teamVideo" poster="assets/video-poster.jpg" muted playsinline loop preload="none">
-            <!-- Додайте власне відео: <source src="assets/team-video.mp4" type="video/mp4"> -->
+         <div class="video-block">
+          <video id="teamVideo" poster="assets/Amina.JPG" playsinline loop preload="none">
+              <source src="assets/video.mp4" type="video/mp4">
           </video>
-          <img class="video-fallback" src="assets/video-poster.jpg" alt="Команда Lucky">
+          
           <div class="video-copy">За Lucky стоять люди, які по-справжньому занурюються у ваш бізнес</div>
           <div class="video-bottom">
             <div class="video-person">
               <div class="role">Засновник · CEO</div>
-              <div class="name">Ім'я Прізвище</div>
+              <div class="name">Аміна Кривенда</div>
               <div class="sub">Про підхід агенції до роботи</div>
             </div>
-            <button class="video-play" id="videoPlayBtn" aria-label="Відтворити відео">
-              <svg class="icon-play" viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"></path></svg>
-              <svg class="icon-pause" viewBox="0 0 24 24" fill="currentColor"><path d="M6 5h4v14H6zM14 5h4v14h-4z"></path></svg>
-            </button>
+           <div class="video-actions">
+  <button class="video-play" id="videoPlayBtn" aria-label="Відтворити відео">
+    <svg class="icon-play" viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"></path></svg>
+    <svg class="icon-pause" viewBox="0 0 24 24" fill="currentColor"><path d="M6 5h4v14H6zM14 5h4v14h-4z"></path></svg>
+  </button>
+  <button class="video-fullscreen" id="videoFullscreenBtn" aria-label="На весь екран">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M8 3H5a2 2 0 0 0-2 2v3"></path><path d="M21 8V5a2 2 0 0 0-2-2h-3"></path><path d="M3 16v3a2 2 0 0 0 2 2h3"></path><path d="M16 21h3a2 2 0 0 0 2-2v-3"></path></svg>
+  </button>
+</div>
           </div>
         </div>
       </div>
@@ -133,7 +138,7 @@
       </div>
       <div class="cases-grid reveal reveal-stagger">
         <div class="case-card">
-          <div class="case-visual"><span class="case-index">CASE / 01</span></div>
+           <div class="case-visual"><img src="assets/groshi.PNG" alt="Пункт обміну валют"><span class="case-index">CASE / 01</span></div>
           <div class="case-body">
             <span class="case-tag">Пункт обміну валют</span>
             <h3>Комплексний запуск локального бренду</h3>
@@ -144,7 +149,7 @@
           </div>
         </div>
         <div class="case-card">
-          <div class="case-visual"><span class="case-index">CASE / 02</span></div>
+           <div class="case-visual"><img src="assets/zoo.PNG" alt="Грумінг-салон"><span class="case-index">CASE / 02</span></div>
           <div class="case-body">
             <span class="case-tag">Грумінг-салон</span>
             <h3>Система стабільного залучення записів</h3>
@@ -155,7 +160,7 @@
           </div>
         </div>
         <div class="case-card">
-          <div class="case-visual"><span class="case-index">CASE / 03</span></div>
+           <div class="case-visual"><img src="assets/brick.PNG" alt="Цегельний завод · B2B"><span class="case-index">CASE / 03</span></div>
           <div class="case-body">
             <span class="case-tag">Цегельний завод · B2B</span>
             <h3>Просування через всі соціальні мережі</h3>
@@ -166,7 +171,7 @@
           </div>
         </div>
         <div class="case-card">
-          <div class="case-visual"><span class="case-index">CASE / 04</span></div>
+          <div class="case-visual"><img src="assets/marlen.PNG" alt="MARLEN — Бренд жіночого одягу"><span class="case-index">CASE / 04</span></div>
           <div class="case-body">
             <span class="case-tag">Бренд жіночого одягу</span>
             <h3>MARLEN — оновлення контент-стратегії</h3>
@@ -177,7 +182,7 @@
           </div>
         </div>
         <div class="case-card">
-          <div class="case-visual"><span class="case-index">CASE / 05</span></div>
+           <div class="case-visual"><img src="assets/style.PNG" alt="ALISHA ROZ — Особистий блог · Стилістка"><span class="case-index">CASE / 05</span></div>
           <div class="case-body">
             <span class="case-tag">Особистий блог · Стилістка</span>
             <h3>ALISHA ROZ — просування бренду та курсу</h3>
@@ -188,7 +193,7 @@
           </div>
         </div>
         <div class="case-card">
-          <div class="case-visual"><span class="case-index">CASE / 06</span></div>
+           <div class="case-visual"><img src="assets/yaht.PNG" alt="Яхт-клуб · Kyiv On Water — кейс Lucky"><span class="case-index">CASE / 06</span></div>
           <div class="case-body">
             <span class="case-tag">Яхт-клуб · Kyiv On Water</span>
             <h3>Оновлення контенту та залучення аудиторії</h3>
@@ -383,13 +388,13 @@
         </div>
         <div class="footer-col">
           <h4>Контакти</h4>
-          <a href="mailto:hello@lucky.agency">hello@lucky.agency</a>
-          <a href="tel:+380000000000">+380 00 000 00 00</a>
-          <a href="https://t.me/">Telegram</a>
+          <a href="mailto:lucky.agency.ba@gmail.com">lucky.agency.ba@gmail.com</a>
+          <a href="tel:+380000000000">+380 73 084 34 46</a>
+          <a href="https://t.me/@amina_kryvenda">Telegram @amina_kryvenda</a>
         </div>
         <div class="footer-col">
           <h4>Соцмережі</h4>
-          <a href="#">Instagram</a>
+          <a href="https://www.instagram.com/amina.kryvenda?igsi=NXkwZHR6aHcxaHps&utm_source=qr">Instagram</a>
           <a href="#">TikTok</a>
           <a href="#">Behance</a>
         </div>
