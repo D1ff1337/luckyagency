@@ -866,7 +866,7 @@ font-family: 'Montserrat', sans-serif;
 @media(max-width:860px){
   .about-block{grid-template-columns:1fr;gap:32px;}
   .about-stats{gap:28px;}
-  .video-block{height:440px;}
+  .video-block{height:680px;}
 }
 
 /* ---------- cases ---------- */
