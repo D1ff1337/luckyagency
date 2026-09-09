@@ -129,7 +129,7 @@ const io = new IntersectionObserver((entries) => {
       io.unobserve(entry.target);
     }
   });
-}, { threshold: 0, rootMargin: '0px 0px -10% 0px' });
+}, { threshold: 0, rootMargin: '0px 0px 150px 0px' });
 revealEls.forEach(el => io.observe(el));
 
 // ==================== ANIMATED STAT COUNTERS ====================
