@@ -1147,3 +1147,226 @@ footer{padding:80px 0 40px;}
 @media(prefers-reduced-motion:reduce){
   *{animation:none !important;transition:none !important;}
 }
+
+
+
+
+#tariffs{
+  padding:50px 0;
+
+  font-family: 'Montserrat', sans-serif;
+}
+
+.tariffs-grid{
+  display:grid;
+  grid-template-columns:1fr;
+  gap:20px;
+}
+
+.tariff-card{
+  background:var(--bg-card);
+  border:1px solid var(--line);
+  border-radius:var(--radius);
+  overflow:hidden;
+   transition:transform .6s cubic-bezier(.2,.8,.2,1), box-shadow .6s ease, border-color .6s ease;
+}
+
+.tariff-card:hover{
+  transform:translateY(-4px);
+  
+  box-shadow:0 16px 32px -12px rgba(23,22,19,0.1);
+  border-color:transparent;
+}
+
+.tariff-header{
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  gap:16px;
+  padding:28px;
+  cursor:pointer;
+}
+
+.tariff-num{
+  font-family:'IBM Plex Mono',monospace;
+  font-size:12px;
+  color:var(--ink-faint);
+  flex:none;
+}
+
+.tariff-header h3{
+  flex:1;
+  font-size:18px;
+  font-weight:600;
+  letter-spacing:-0.01em;
+  margin:0;
+}
+
+.tariff-toggle{
+  width:32px;
+  height:32px;
+  border:none;
+  border-radius:50%;
+  background:transparent;
+  color:var(--ink);
+  cursor:pointer;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  flex:none;
+  padding:0;
+}
+
+.tariff-toggle svg{
+  width:14px;
+  height:14px;
+  transition:transform .35s cubic-bezier(.2,.8,.2,1);
+}
+
+.tariff-card.open .tariff-toggle svg{
+  transform:rotate(180deg);
+}
+
+
+.tariff-content {
+  display: grid;
+  grid-template-rows: 0fr;
+  overflow: hidden;
+  opacity: 0;
+  padding: 0;
+  transition: 
+    grid-template-rows 1.2s cubic-bezier(0.16, 1, 0.3, 1),
+    opacity 1.2s cubic-bezier(0.16, 1, 0.3, 1),
+    padding 1.2s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.tariff-card.open .tariff-content {
+  grid-template-rows: 1fr; 
+  opacity: 1;
+  padding: 36px 28px;
+}
+
+
+
+
+.tariff-content ul {
+  min-height: 0; 
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 24px 32px;
+}
+
+
+.tariff-content li{
+  font-size:15px;
+  color:var(--ink);
+  line-height:1.6;
+  display:flex;
+  align-items:flex-start;
+  gap:12px;
+  position:relative;
+  font-weight:500;
+}
+
+.tariff-content li::before{
+  content:"";
+  position:relative;
+  flex:none;
+  width:16px;
+  height:16px;
+  background-image:url('../assets/logo-mark.png');
+  background-size:contain;
+  background-repeat:no-repeat;
+  background-position:center;
+  margin-top:2px;
+   font-family: 'Montserrat', sans-serif;
+  font-weight: 800;
+}
+
+
+
+.tariff-content li::after{
+  
+  position:absolute;
+  left:4px;
+  top:3px;
+  color:#fff;
+   font-family: 'Montserrat', sans-serif;
+  font-weight: 800;
+  font-size:11px;
+
+}
+
+
+
+.add-services-section{
+  padding:130px 0;
+  background:var(--bg-soft);
+}
+
+.add-services-grid{
+  display:grid;
+  grid-template-columns:1fr;
+  gap:20px;
+}
+
+.add-service-card{
+  background:var(--bg-card);
+  border:1px solid var(--line);
+  border-radius:var(--radius);
+  padding:32px;
+  display:flex;
+  flex-direction:column;
+  gap:16px;
+}
+
+.add-service-card h3{
+  font-size:18px;
+  font-weight:600;
+  letter-spacing:-0.01em;
+  line-height:1.3;
+  margin:0;
+}
+
+.add-service-card p{
+  font-size:14px;
+  color:var(--ink-soft);
+  line-height:1.6;
+  margin:0;
+}
+
+@media(max-width:860px){
+  #tariffs{
+    padding:90px 0;
+  }
+  
+  .add-services-section{
+    padding:90px 0;
+  }
+  
+  .add-service-card{
+    padding:24px;
+  }
+
+    .tariff-content ul{
+    grid-template-columns:1fr;
+  }
+}
+
+
+
+.section-head-tariffs{
+  display:flex;
+  flex-direction:column;
+  align-items:flex-start;
+  gap:24px;
+  margin-bottom:64px;
+}
+
+.section-head-tariffs{flex-direction:column;align-items:flex-start;}
+
+.section-head-tariffs h2{font-size:clamp(30px,4vw,50px);max-width:640px;font-weight:500;}
+.section-head-tariffs p{max-width:540px;color:var(--ink-soft);font-size:15px;padding-bottom:6px;}
